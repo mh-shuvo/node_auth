@@ -10,21 +10,14 @@ app.use(bodyParser.json());
 app.use('/api/users', authRoute);
 
 app.get('/', (req, res) => {
-    let data = {
-        "fieldCount": 0,
-        "affectedRows": 1,
-        "insertId": 7,
-        "serverStatus": 2,
-        "warningCount": 0,
-        "message": "",
-        "protocol41": true,
-        "changedRows": 0
-    };
-    res.json(data.insertId);
+    res.json({
+        "name":"MD. Mehedi Hasan",
+        "designation":"Senior Software Engineer/ Software Architect"
+    })
 });
 
 
 
 app.listen('3000', () => {
-    console.log("Your searver running on the port 3000");
+    console.log("Your searver running on the port 5000");
 });
