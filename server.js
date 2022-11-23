@@ -9,13 +9,15 @@ app.use(bodyParser.json());
 
 app.use('/api/users', authRoute);
 
-app.get('/', (req, res) => {
+app.get('/', index);
+
+const index = (req, res) => {
     res.json({
         "name":"MD. Mehedi Hasan",
         "designation":"Senior Software Engineer/ Software Architect"
     })
-});
-
+}
+export {index}
 
 
 app.listen('3000', () => {
